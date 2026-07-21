@@ -159,24 +159,20 @@ HERO SECTION
 
 
 .hero{
-
     height:90vh;
-
     position:relative;
-
     overflow:hidden;
-
 }
 
 
 .hero-slide{
     position:absolute;
-    width:100%;
+    width:120%;
     height:100%;
+    left:-20%;
     background-size:cover;
     background-position:left center;
 }
-
 
 
 .hero-slide.active{
