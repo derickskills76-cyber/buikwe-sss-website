@@ -236,6 +236,50 @@ HERO SECTION
 
 
 
+.hero-content h1{
+
+    font-size:55px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-content h3{
+
+    color:var(--gold);
+
+    font-size:25px;
+
+}
+
+
+
+.hero-content p{
+
+    font-size:18px;
+
+    margin:25px 0;
+
+    line-height:1.7;
+
+}
+
+
+
+.buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+
+
 
 .btn{
 
