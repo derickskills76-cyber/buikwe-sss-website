@@ -323,3 +323,21 @@ window.addEventListener("load",()=>{
 
 
 });
+
+
+
+
+
+
+window.addEventListener("load", function(){
+
+    document.body.classList.add("loaded");
+
+    document.querySelectorAll("section, .card, .welcome-container")
+    .forEach(function(item){
+
+        item.classList.add("show");
+
+    });
+
+});
