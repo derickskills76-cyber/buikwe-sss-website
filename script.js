@@ -31,6 +31,20 @@ function toggleMenu(){
 }
 
 
+window.addEventListener("load", function(){
+
+    document.body.classList.add("loaded");
+
+    const sections = document.querySelectorAll(
+        "section, .card, .welcome-container"
+    );
+
+    sections.forEach(function(section){
+        section.classList.add("show");
+    });
+
+});
+
 
 
 
