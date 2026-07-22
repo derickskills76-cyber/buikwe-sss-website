@@ -174,16 +174,20 @@ HERO SECTION
 
     position:absolute;
 
-    width:100%;
+    width:110%;
     height:100%;
+
+    left:-5%;
 
     background-size:cover;
 
     background-position:center;
 
+    background-repeat:no-repeat;
+
     opacity:0;
 
-    transition:1.5s;
+    transition:1.5s ease;
 
 }
 
