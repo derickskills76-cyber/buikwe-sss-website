@@ -11,12 +11,7 @@
 <title>Contact | Buikwe Senior Secondary School</title>
 
 
-<link rel="stylesheet" href="style.css">
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
 
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +27,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <body>
 
 
-
 <!-- HEADER -->
 
 
@@ -41,15 +35,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <div class="logo">
 
-
 <img src="log.jpg" alt="Buikwe SS Logo">
-
 
 <h2>Buikwe S.S.S</h2>
 
-
 </div>
-
 
 
 
@@ -82,21 +72,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 
 
-
 <div class="menu-icon" onclick="toggleMenu()">
-
 
 <i class="fa-solid fa-bars"></i>
 
-
 </div>
-
 
 
 </nav>
 
 
 </header>
+
 
 
 
@@ -154,7 +141,6 @@ Contact Information
 
 
 
-
 <div class="cards">
 
 
@@ -197,12 +183,16 @@ Visit the school campus for more information.
 
 <h3>
 Telephone
+
 </h3>
 
 
 <p>
 
 +256 705 116 256
+
+<br>
+
 
 </p>
 
@@ -223,6 +213,7 @@ Telephone
 
 <h3>
 Email
+
 </h3>
 
 
@@ -249,6 +240,7 @@ info@buikwess.ac.ug
 
 
 
+
 <!-- CONTACT FORM -->
 
 
@@ -257,14 +249,11 @@ info@buikwess.ac.ug
 
 <div class="section-title">
 
-
 <h2>
 Send Us A Message
 </h2>
 
-
 </div>
-
 
 
 
@@ -272,19 +261,48 @@ Send Us A Message
 <div class="contact-container">
 
 
-<form class="contact-form">
+
+<form class="contact-form"
+action="https://api.web3forms.com/submit"
+method="POST">
 
 
-<input type="text" placeholder="Your Name" required>
+
+<input type="hidden"
+name="access_key"
+value="dfe6b6f8-c628-44e4-8470-b1f864f361c7">
 
 
-<input type="email" placeholder="Your Email" required>
+
+<input 
+type="text"
+name="name"
+placeholder="Your Name"
+required>
 
 
-<input type="text" placeholder="Subject">
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
 
 
-<textarea placeholder="Your Message"></textarea>
+
+<input
+type="text"
+name="subject"
+placeholder="Subject"
+required>
+
+
+
+<textarea
+name="message"
+placeholder="Your Message"
+required></textarea>
+
 
 
 <button type="submit">
@@ -292,6 +310,7 @@ Send Us A Message
 Send Message
 
 </button>
+
 
 
 </form>
@@ -314,38 +333,21 @@ Send Message
 Find Us On Map
 </h2>
 
-
 </div>
-
 
 
 
 <div class="map-container">
 
 
-<iframe 
-
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7460888942273!2d33.02233077435318!3d0.3447663639831696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dd907a25556d9%3A0xef34c3aad5f55e73!2sBuikwe%20Senior%20Secondary%20School%20Makonge!5e0!3m2!1sen!2sug!4v1784031914075!5m2!1sen!2sug"
-
-width="600"
-
-height="450"
-
-style="border:0;"
-
-allowfullscreen=""
-
-loading="lazy"
-
-referrerpolicy="strict-origin-when-cross-origin">
-
-</iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7460888942273!2d33.02233077435318!3d0.3447663639831696!2m3!1f0!2f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dd907a25556d9%3A0xef34c3aad5f55e73!2sBuikwe%20Senior%20Secondary%20School%20Makonge!5e0!3m2!1sen!2sug!4v1784031914075!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
 
 </div>
 
 
 </section>
+
 
 
 
@@ -365,7 +367,6 @@ School Office Hours
 </h2>
 
 
-
 <p>
 
 Monday - Friday: 8:00 AM - 5:00 PM
@@ -381,8 +382,6 @@ Sunday: Closed
 </p>
 
 
-
-
 <a href="admissions.html" class="btn">
 
 Admissions Information
@@ -391,6 +390,7 @@ Admissions Information
 
 
 </section>
+
 
 
 
@@ -428,12 +428,7 @@ Buikwe Senior Secondary School
 
 
 
-
-<!-- JAVASCRIPT -->
-
-
-<script src="script.js"></script>
-
+<script src="js/script.js"></script>
 
 
 </body>
