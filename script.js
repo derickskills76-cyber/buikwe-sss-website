@@ -341,3 +341,25 @@ window.addEventListener("load", function(){
     });
 
 });
+
+
+
+
+
+
+// Clear contact form after successful submission
+const contactForm = document.querySelector(".contact-form");
+
+if(contactForm){
+
+    contactForm.addEventListener("submit", function(){
+
+        setTimeout(function(){
+
+            contactForm.reset();
+
+        }, 1000);
+
+    });
+
+}
