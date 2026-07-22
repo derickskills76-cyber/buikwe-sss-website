@@ -11,20 +11,7 @@
 <title>Contact | Buikwe Senior Secondary School</title>
 
 
-<script>
-window.addEventListener("load", function(){
 
-    document.querySelectorAll("section, .card, .welcome-container")
-    .forEach(function(item){
-
-        item.classList.add("show");
-
-    });
-
-    document.body.classList.add("loaded");
-
-});
-</script>
 
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -439,9 +426,19 @@ Buikwe Senior Secondary School
 
 
 
-
 <script>
-document.body.classList.add("loaded");
+window.addEventListener("load", function(){
+
+    document.querySelectorAll("section, .card, .welcome-container")
+    .forEach(function(item){
+
+        item.classList.add("show");
+
+    });
+
+    document.body.classList.add("loaded");
+
+});
 </script>
 
 
