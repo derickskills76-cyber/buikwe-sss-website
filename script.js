@@ -363,3 +363,130 @@ if(contactForm){
     });
 
 }
+
+
+
+
+
+
+
+// ================= DOCUMENT PREVIEW =================
+
+
+function previewFile(inputId, previewId){
+
+const fileInput = document.getElementById(inputId);
+
+const preview = document.getElementById(previewId);
+
+
+if(fileInput){
+
+fileInput.addEventListener("change", function(){
+
+
+const file = this.files[0];
+
+
+if(file){
+
+
+if(file.type.startsWith("image/")){
+
+
+const reader = new FileReader();
+
+
+reader.onload = function(e){
+
+
+preview.innerHTML = `
+
+<img src="${e.target.result}"
+
+style="width:150px;height:150px;object-fit:cover;border-radius:10px;">
+
+
+<p>${file.name}</p>
+
+`;
+
+}
+
+
+reader.readAsDataURL(file);
+
+
+}
+
+else{
+
+
+preview.innerHTML = `
+
+<p>
+
+📄 ${file.name}
+
+<br>
+
+Size: ${(file.size/1024).toFixed(2)} KB
+
+</p>
+
+`;
+
+}
+
+
+}
+
+
+});
+
+
+}
+
+
+}
+
+
+
+previewFile("passport_photo","passport_preview");
+
+previewFile("results_slip","results_preview");
+
+previewFile("report_form","report_preview");
+
+
+
+
+// ===== TAB FUNCTION =====
+function showBlock(blockId, button) {
+    // Hide all blocks
+    var blocks = document.querySelectorAll('.admission-block');
+    for (var i = 0; i < blocks.length; i++) {
+        blocks[i].classList.remove('active');
+    }
+    
+    // Show selected block
+    document.getElementById(blockId).classList.add('active');
+    
+    // Remove active class from all buttons
+    var buttons = document.querySelectorAll('.tab-btn');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active-btn');
+    }
+    
+    // Add active class to clicked button
+    button.classList.add('active-btn');
+    
+    // Auto-select the corresponding radio button
+    if (blockId === 'block-s1') {
+        document.getElementById('s1_radio').checked = true;
+    } else if (blockId === 'block-s5') {
+        document.getElementById('s5_radio').checked = true;
+    } else if (blockId === 'block-transfer') {
+        document.getElementById('transfer_radio').checked = true;
+    }
+}
