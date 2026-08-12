@@ -490,3 +490,53 @@ function showBlock(blockId, button) {
         document.getElementById('transfer_radio').checked = true;
     }
 }
+
+
+
+
+
+
+
+
+// ---------- WELCOME SLIDER (3 IMAGES) ----------
+let welcomeSlideIndex = 0;
+const welcomeSlides = document.querySelectorAll('.welcome-slide');
+const dots = document.querySelectorAll('.dot');
+
+function showWelcomeSlide(n) {
+    // Remove active from all slides and dots
+    welcomeSlides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Add active to current slide and dot
+    welcomeSlides[n].classList.add('active');
+    dots[n].classList.add('active');
+}
+
+function changeWelcomeSlide(direction) {
+    welcomeSlideIndex = (welcomeSlideIndex + direction + welcomeSlides.length) % welcomeSlides.length;
+    showWelcomeSlide(welcomeSlideIndex);
+}
+
+function currentWelcomeSlide(n) {
+    welcomeSlideIndex = n;
+    showWelcomeSlide(welcomeSlideIndex);
+}
+
+// Auto-slide every 4 seconds
+let welcomeAutoSlide = setInterval(() => {
+    changeWelcomeSlide(1);
+}, 4000);
+
+// Pause on hover
+const welcomeSlider = document.querySelector('.welcome-slider');
+if (welcomeSlider) {
+    welcomeSlider.addEventListener('mouseenter', () => {
+        clearInterval(welcomeAutoSlide);
+    });
+    welcomeSlider.addEventListener('mouseleave', () => {
+        welcomeAutoSlide = setInterval(() => {
+            changeWelcomeSlide(1);
+        }, 4000);
+    });
+}
