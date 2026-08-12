@@ -150,7 +150,9 @@ Learn More
 
 
 </section>
-<!-- WELCOME -->
+
+
+<!-- WELCOME SECTION WITH SLIDER -->
 
 
 <section class="welcome">
@@ -190,11 +192,33 @@ Read More
 
 
 
-<div class="welcome-image">
+<!-- WELCOME IMAGE SLIDER - 3 IMAGES -->
+<div class="welcome-slider">
 
-<img src="over view.jpg" alt="School">
+<!-- Three Images for Slideshow -->
+<div class="welcome-slide active" style="background-image:url('over view.jpg');"></div>
+<div class="welcome-slide" style="background-image:url('buikwe 1.png');"></div>
+<div class="welcome-slide" style="background-image:url('buikwe2.png');"></div>
+
+<!-- Slider Arrows -->
+<div class="slider-arrows">
+    <button onclick="changeWelcomeSlide(-1)">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="changeWelcomeSlide(1)">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+
+<!-- Slider Dots -->
+<div class="slider-dots">
+    <span class="dot active" onclick="currentWelcomeSlide(0)"></span>
+    <span class="dot" onclick="currentWelcomeSlide(1)"></span>
+    <span class="dot" onclick="currentWelcomeSlide(2)"></span>
+</div>
 
 </div>
+<!-- END OF WELCOME SLIDER -->
 
 
 </div>
@@ -541,6 +565,9 @@ Buikwe Senior Secondary School
 <!-- JavaScript -->
 
 <script src="script.js"></script>
+
+
+<!-- ADDITIONAL JAVASCRIPT FOR WELCOME SLIDER -->
 
 
 </body>
